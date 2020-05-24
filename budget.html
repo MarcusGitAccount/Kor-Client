@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget</title>
+  <script src="js/redirect.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/load.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 id="no-query">Your budget here</h1>
+
+  <div id="budget">
+
+    <h4>Budget data</h4>
+    <ul id="data">
+
+    </ul>
+    <div>
+      <b>Remaining budget: </b>
+      <span id="remaining">0</span>
+    </div>
+    
+
+    <h4>Budget roles</h4>
+    <ul id="roles">
+      No roles created.
+    </ul>
+
+    <h4>Budget expenditures</h4>
+    <ul id="expenditures">
+      No expenditures added yet.
+    </ul>
+    
+    <h4>Budget alerts</h4>
+    <ul id="alerts">
+      No alerts currently.
+    </ul>
+
+  </div>
+
+  <hr>
+
+  <div id="create-role">
+    <h3>Create a new role</h3>
+    <select id="users"></select>
+    <select id="types">
+      <option value="ADMIN">Administrator</option>
+      <option value="EDIT">Editor</option>
+      <option value="VIEW">Viewer</option>
+
+    </select>
+    <button>Create role</button>
+  </div>
+  
+
+  <hr>
+
+  <div id="add-expenditure">
+    <h3>Add a new expenditure to the budget</h3>
+    <input type="number" id="amount" name="amount" min="0" max="1000" placeholder="Amount">
+    <input type="text" maxlength="200" placeholder="Comment">
+    <select id="exp-types">
+      <option value="BILL">Bill</option>
+      <option value="AMENITY">Amenity</option>
+      <option value="MISC">Miscellaneous</option>
+      <option value="FOOD">Food</option>
+      <option value="Large">Large expenditure</option>
+    </select>
+    <button>Create expenditure</button>
+  </div>
+
+  <hr>
+
+  <div id="report">
+    <h3>Generate aggregation report</h3>
+    <label for="report-types">Report type</label>
+    <select id="report-types" name="report-types">
+      <option value="CountAndSumByType">Aggregation by expenditure type</option>
+      <option value="CountAndSumByTypeRole">Aggregation by expenditure type and role type</option>
+    </select>
+    <button>Generate report</button>
+    <table id="report-container" style="margin: 50px">
+
+    </table>
+  </div>
+
+  <script src="js/budget.js"></script>
+</body>
+</html>
