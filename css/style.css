@@ -1,0 +1,13 @@
+ul, li {
+  font-weight: 100;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#report-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
